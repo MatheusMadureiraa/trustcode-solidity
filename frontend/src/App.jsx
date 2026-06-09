@@ -516,7 +516,7 @@ function App() {
       <header className="topbar">
         <div>
           <p className="eyebrow">BipTrust</p>
-          <h1 className="page-title">Bipou, alugou. Devolveu, recebeu.</h1>
+          <h1 className="page-title">Bipou, alugou. Bipou, recebeu.</h1>
           <p className="page-copy">
             O fluxo de caução instantâneo para aluguéis premium. A blockchain registra o tempo de retirada e devolução sem confiar em ninguém.
           </p>
