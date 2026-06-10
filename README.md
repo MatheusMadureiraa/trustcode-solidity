@@ -1,6 +1,4 @@
 # 🚗 BipTrust | Hackweb iRede (Trilha TrustCode)
-> *"Bipou, alugou. Devolveu, recebeu."*
-
 <p align="center">
   <img src="./assets/biptrust.png" width="80%" alt="BipTrust Banner" />
 </p>
