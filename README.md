@@ -28,7 +28,21 @@ A arquitetura elimina a burocracia através de 3 atores principais:
 
 ---
 
-## 📐 Fluxo do usuário
+## ⚙️Arquitetura
+
+O projeto está organizado em camadas claras para backend smart contract, frontend Web3 e automação de deploy:
+
+- `contracts/` - código fonte Solidity do contrato `BipTrust.sol` e seus artefatos no ambiente de compilação.
+- `scripts/` - scripts de deploy e utilitários Hardhat para subir o contrato e configurar parâmetros.
+- `test/` - testes de contrato em JavaScript utilizando Hardhat para validar fluxos de aluguel, devolução e vistoria.
+- `frontend/` - aplicação React + Vite que consome o contrato via Ethers.js e apresenta as visões de Cliente, Locadora e Totem IoT.
+- `artifacts/` - artefatos gerados pelo Hardhat após compilação, incluindo ABI e bytecode.
+- `cache/` - cache de compilação de Solidity usado pelo Hardhat para acelerar builds locais.
+- `assets/` - imagens e recursos visuais usados no README e na interface.
+
+---
+
+## 📐 Fluxo
 
 O ciclo de vida de uma locação no BipTrust é governado por **5 passos essenciais** que garantem a segurança financeira e a precisão do tempo sem intermediação humana:
 1. **Criação e Depósito:** O cliente escolhe o período e deposita a caução em ETH diretamente no cofre do Smart Contract (`criarAluguel`).
@@ -93,7 +107,9 @@ Acessa a aplicação em `http://localhost:5173` (ou a porta indicada pelo Vite n
 ---
 
 ## 📸 Evidências de funcionamento
-Diversas imagens podem ser conferidas na pasta [./assets](./assets/), como:
+**Endereço do Contrato (Sepolia Testnet):** `0xE0696580c84e097Df56dfdE62Bb0E7e16397D45f`
+
+> Diversas imagens podem ser conferidas na pasta [./assets](./assets/), como:
 
 #### Deploy do contrato na rede
 <p align="center">
