@@ -1,6 +1,6 @@
 # 🚗 BipTrust | Hackweb iRede (Trilha TrustCode)
 <p align="center">
-  <img src="./assets/biptrust.png" width="80%" alt="BipTrust Banner" />
+  <img src="./assets/biptrust.png" width="100%" alt="BipTrust Banner" />
 </p>
 
 **Endereço do Contrato (Sepolia Testnet):** `0xE0696580c84e097Df56dfdE62Bb0E7e16397D45f`
