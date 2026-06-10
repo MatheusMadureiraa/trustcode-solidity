@@ -11,7 +11,7 @@ O **BipTrust** é um protocolo de *escrow* (caução) temporal integrado com IoT
 
 Hoje, o mercado exige bloqueios abusivos no cartão de crédito e depende de intermediários para calcular atrasos e devolver o dinheiro. O BipTrust resolve essa dor criando um ambiente *Zero-Trust*: o valor da caução fica protegido em um Smart Contract imutável, e o registro de tempo (check-in/check-out) é feito através da leitura física de uma tag NFC no Totem IoT da loja, transferindo a confiança do balcão humano para a blockchain.
 
-## ⚙️ O Fluxo de Valor Automatizado
+## ⚙️ Atores necessários
 A arquitetura elimina a burocracia através de 3 atores principais:
 1. **O Cliente (Smart Wallet):** Bloqueia a caução (ETH) no contrato e acompanha o cronômetro regressivo da locação.
 2. **O Totem IoT (Oracle/Hardware):** Um terminal na loja física que emite a transação de retirada e devolução do bem, gravando o `block.timestamp` inviolável.
