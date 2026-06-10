@@ -464,6 +464,10 @@ function App() {
       addToast('error', 'Conecte a carteira para confirmar vistoria.')
       return
     }
+    if (!isOwnerAccount) {
+      addToast('error', `Use a conta owner para confirmar a vistoria: ${ownerAddress || 'desconhecida'}`)
+      return
+    }
     if (Number(damageCost) < 0) {
       addToast('error', 'O custo de danos não pode ser negativo.')
       return
@@ -478,8 +482,10 @@ function App() {
       setInspectionData((current) => current && { ...current, statusLabel: 'Encerrado' })
       setDamageCost('0')
     } catch (error) {
-      console.error(error)
-      addToast('error', 'Falha ao assinar vistoria no blockchain.')
+      const reason =
+        error?.data?.message || error?.reason || error?.message || error?.error?.message || String(error)
+      console.error('confirmVistoria error', error)
+      addToast('error', `Falha ao assinar vistoria: ${reason}`)
     } finally {
       setLoading(false)
     }
